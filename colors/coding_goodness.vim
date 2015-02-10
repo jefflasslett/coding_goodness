@@ -135,6 +135,7 @@ hi rubystringdelimiter guifg=#A5C261 guibg=NONE guisp=NONE gui=NONE ctermfg=107 
 hi rubyinterpolation guifg=#519F50 guibg=NONE guisp=NONE gui=NONE ctermfg=71 ctermbg=NONE cterm=NONE
 hi rubypredefinedconstant guifg=#DA4939 guibg=NONE guisp=NONE gui=NONE ctermfg=167 ctermbg=NONE cterm=NONE
 
+hi conceal guifg=#00afaf guibg=NONE guisp=NONE gui=bold ctermfg=37 ctermbg=NONE cterm=bold
 
 
 
