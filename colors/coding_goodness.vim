@@ -14,12 +14,13 @@ set t_Co=256
 let g:colors_name = "coding_goodness"
 
 hi Normal           guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=0         cterm=NONE        term=NONE
-hi ColorColumn      guifg=#3a3a3a        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=237        ctermbg=0         cterm=NONE        term=NONE
-hi Conceal          guifg=#d0d0d0        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=252        ctermbg=0         cterm=NONE        term=NONE
+hi ColorColumn      guifg=NONE           guibg=#262626        guisp=NONE           gui=NONE        ctermfg=NONE         ctermbg=235       cterm=NONE        term=NONE
+hi Conceal          guifg=#d0d0d0        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=252          ctermbg=0         cterm=NONE        term=NONE
 hi Cursor           guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=0         cterm=NONE        term=NONE
 hi CursorIM         guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=0         cterm=NONE        term=NONE
 hi CursorColumn     guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=0         cterm=NONE        term=NONE
 hi CursorLine       guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=0         cterm=NONE        term=NONE
+hi CursorLine       guifg=NONE           guibg=#1c1c1c        guisp=NONE           gui=NONE        ctermfg=NONE         ctermbg=234       cterm=NONE        term=NONE
 hi Directory        guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=0         cterm=NONE        term=NONE
 hi DiffAdd          guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=0         cterm=NONE        term=NONE
 hi DiffChange       guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=0         cterm=NONE        term=NONE
