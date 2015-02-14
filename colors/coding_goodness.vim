@@ -31,8 +31,8 @@ hi Folded           guifg=#b2b2b2        guibg=#000000        guisp=#000000     
 hi FoldColumn       guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
 hi SignColumn       guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
 hi IncSearch        guifg=#ffffff        guibg=#df5f00        guisp=#000000        gui=underline   ctermfg=15           ctermbg=166        cterm=NONE        term=NONE
-hi LineNr           guifg=#5fdf00        guibg=#005f00        guisp=#000000        gui=NONE        ctermfg=76           ctermbg=22         cterm=NONE        term=NONE
-hi CursorLineNr     guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
+hi LineNr           guifg=#008700        guibg=#1c1c1c        guisp=NONE           gui=NONE        ctermfg=28           ctermbg=234        cterm=NONE        term=NONE
+hi CursorLineNr     guifg=#00df00        guibg=#1c1c1c        guisp=NONE           gui=NONE        ctermfg=40           ctermbg=234        cterm=NONE        term=NONE
 hi MatchParen       guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
 hi ModeMsg          guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
 hi MoreMsg          guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
@@ -42,7 +42,7 @@ hi PmenuSel         guifg=#b2b2b2        guibg=#000000        guisp=#000000     
 hi PmenuSbar        guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
 hi PmenuThumb       guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
 hi Question         guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
-hi Search           guifg=#ffffff        guibg=#ffaf00        guisp=#000000        gui=bold        ctermfg=15           ctermbg=214        cterm=NONE        term=NONE
+hi Search           guifg=#ffffff        guibg=#262626        guisp=#000000        gui=underline   ctermfg=15           ctermbg=235        cterm=underline   term=NONE
 hi SpecialKey       guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
 hi SpellBad         guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
 hi SpellCap         guifg=#b2b2b2        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=249          ctermbg=16         cterm=NONE        term=NONE
@@ -104,4 +104,18 @@ hi Ignore           guifg=#b2b2b2        guibg=#000000        guisp=#000000     
 hi Error            guifg=#800000        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=1            ctermbg=16         cterm=NONE        term=NONE
 
 hi Todo             guifg=#0000ff        guibg=#000000        guisp=#000000        gui=NONE        ctermfg=12           ctermbg=16         cterm=NONE        term=NONE
+
+" This is for setting the cterm cursor.  Not such a simple thing I found out.
+" See termcap-cursor-color in vim's help:
+let &t_xs = "abc"
+
+if &term =~ "xterm"
+  let &t_SI = "\<Esc>]12;purple\x7"
+  let &t_EI = "\<Esc>]12;blue\x7"
+endif
+
+if &term =~ "screen"
+  let &t_SI = "\<Esc>]12;purple\x7"
+  let &t_EI = "\<Esc>]12;blue\x7"
+endif
 
