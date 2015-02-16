@@ -135,44 +135,50 @@ exe 'hi! WarningMsg       '.s:SetAttrs(s:defaults)
 exe 'hi! WildMenu         '.s:SetAttrs(s:defaults)
 
 exe 'hi! Comment          '.s:SetAttrs( { 'fg': s:grn1, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
+
 exe 'hi! Constant         '.s:SetAttrs( { 'fg': s:red0, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
-exe 'hi! String           '.s:SetAttrs(s:defaults)
-exe 'hi! Character        '.s:SetAttrs(s:defaults)
-exe 'hi! Number           '.s:SetAttrs(s:defaults)
-exe 'hi! Boolean          '.s:SetAttrs(s:defaults)
-exe 'hi! Float            '.s:SetAttrs(s:defaults)
-exe 'hi! Identifier       '.s:SetAttrs(s:defaults)
-exe 'hi! Function         '.s:SetAttrs( { 'fg': s:blue2, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
-exe 'hi! Statement        '.s:SetAttrs(s:defaults)
-exe 'hi! Conditional      '.s:SetAttrs(s:defaults)
-exe 'hi! Repeat           '.s:SetAttrs(s:defaults)
-exe 'hi! Label            '.s:SetAttrs(s:defaults)
-exe 'hi! Operator         '.s:SetAttrs( { 'fg': s:gray5, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
-exe 'hi! Keyword          '.s:SetAttrs( { 'fg': s:blue3, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:u ], 'c_attrs': [ s:u ], 'term': s:N } )
-exe 'hi! Exception        '.s:SetAttrs(s:defaults)
-exe 'hi! PreProc          '.s:SetAttrs(s:defaults)
-exe 'hi! Include          '.s:SetAttrs(s:defaults)
-exe 'hi! Define           '.s:SetAttrs(s:defaults)
-exe 'hi! Macro            '.s:SetAttrs(s:defaults)
-exe 'hi! PreCondit        '.s:SetAttrs(s:defaults)
-exe 'hi! Type             '.s:SetAttrs(s:defaults)
-exe 'hi! StorageClass     '.s:SetAttrs(s:defaults)
-exe 'hi! Structure        '.s:SetAttrs(s:defaults)
-exe 'hi! Typedef          '.s:SetAttrs(s:defaults)
-exe 'hi! Special          '.s:SetAttrs(s:defaults)
-exe 'hi! SpecialChar      '.s:SetAttrs(s:defaults)
-exe 'hi! Tag              '.s:SetAttrs(s:defaults)
-exe 'hi! Delimiter        '.s:SetAttrs(s:defaults)
-exe 'hi! SpecialComment   '.s:SetAttrs(s:defaults)
-exe 'hi! Debug            '.s:SetAttrs(s:defaults)
+hi! link String           Constant
+hi! link Character        Constant
+hi! link Number           Constant
+hi! link Boolean          Constant
+hi! link Float            Constant
+
+exe 'hi! Identifier       '.s:SetAttrs( { 'fg': s:blue2, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
+hi! link Function         Identifier
+
+exe 'hi! Statement        '.s:SetAttrs( { 'fg': s:blue3, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:u ], 'c_attrs': [ s:u ], 'term': s:N } )
+exe 'hi! Operator         '.s:SetAttrs( { 'fg': s:blue3, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
+hi! link Conditional      Statement
+hi! link Repeat           Statement
+hi! link Label            Statement
+hi! link Keyword          Statement
+hi! link Exception        Statement
+
+exe 'hi! PreProc          '.s:SetAttrs( { 'fg': s:orng2, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
+hi! link Include          PreProc
+hi! link Define           PreProc
+hi! link Macro            PreProc
+hi! link PreCondit        PreProc
+
+exe 'hi! Type             '.s:SetAttrs( { 'fg': s:blue1, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
+hi! link StorageClass Type
+hi! link Structure    Type
+hi! link Typedef      Type
+
+exe 'hi! Special          '.s:SetAttrs( { 'fg': s:orng1, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
+hi! link SpecialChar      Special
+hi! link Tag              Special
+hi! link Delimiter        Special
+hi! link SpecialComment   Special
+hi! link Debug            Special
 
 exe 'hi! Underlined       '.s:SetAttrs( { 'fg': s:gray4, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:u ], 'c_attrs': [ s:u ], 'term': s:u } )
 
 exe 'hi! Ignore           '.s:SetAttrs(s:defaults)
 
-exe 'hi! Error            '.s:SetAttrs(s:defaults)
+exe 'hi! Error            '.s:SetAttrs( { 'fg': s:orng2, 'bg': s:red0, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
 
-exe 'hi! Todo             '.s:SetAttrs(s:defaults)
+exe 'hi! Todo             '.s:SetAttrs( { 'fg': s:orng2, 'bg': s:blue1, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
 
 " This is for setting the cterm cursor.  Not such a simple thing I found out.
 " See termcap-cursor-color in vim's help:
