@@ -33,6 +33,27 @@ let s:gray4 = { 'c': '249', 'g': '#b2b2b2' } " normal
 let s:gray5 = { 'c': '252', 'g': '#d0d0d0' } "
 let s:white = { 'c':  '15', 'g': '#ffffff' } " white
 
+
+" blues
+let s:blue0 = { 'c': '19', 'g': '#0000af' }
+let s:blue1 = { 'c': '25', 'g': '#005fdf' }
+let s:blue2 = { 'c': '31', 'g': '#0087df' }
+let s:blue3 = { 'c': '45', 'g': '#00dfff' }
+
+" red/orange
+let s:red0  = { 'c': '160', 'g': '#df0000' }
+let s:orng1 = { 'c': '172', 'g': '#df8700' }
+let s:orng2 = { 'c': '184', 'g': '#dfdf00' }
+let s:orng3 = { 'c': '227', 'g': '#ffff5f' }
+
+" greens
+let s:grn0 = { 'c': '28', 'g': '#008700' }
+let s:grn1 = { 'c': '34', 'g': '#00af00' }
+let s:grn2 = { 'c': '40', 'g': '#00df00' }
+let s:grn3 = { 'c': '46', 'g': '#00ff00' }
+
+
+
 let s:defaults = { 'fg'      : s:gray4
 \                , 'bg'      : s:black
 \                , 'sp'      : s:N
@@ -113,21 +134,21 @@ exe 'hi! VisualNOS        '.s:SetAttrs(s:defaults)
 exe 'hi! WarningMsg       '.s:SetAttrs(s:defaults)
 exe 'hi! WildMenu         '.s:SetAttrs(s:defaults)
 
-exe 'hi! Comment          '.s:SetAttrs(s:defaults)
-exe 'hi! Constant         '.s:SetAttrs(s:defaults)
+exe 'hi! Comment          '.s:SetAttrs( { 'fg': s:grn1, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
+exe 'hi! Constant         '.s:SetAttrs( { 'fg': s:red0, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
 exe 'hi! String           '.s:SetAttrs(s:defaults)
 exe 'hi! Character        '.s:SetAttrs(s:defaults)
 exe 'hi! Number           '.s:SetAttrs(s:defaults)
 exe 'hi! Boolean          '.s:SetAttrs(s:defaults)
 exe 'hi! Float            '.s:SetAttrs(s:defaults)
 exe 'hi! Identifier       '.s:SetAttrs(s:defaults)
-exe 'hi! Function         '.s:SetAttrs( { 'fg': s:white, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
+exe 'hi! Function         '.s:SetAttrs( { 'fg': s:blue2, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
 exe 'hi! Statement        '.s:SetAttrs(s:defaults)
 exe 'hi! Conditional      '.s:SetAttrs(s:defaults)
 exe 'hi! Repeat           '.s:SetAttrs(s:defaults)
 exe 'hi! Label            '.s:SetAttrs(s:defaults)
-exe 'hi! Operator         '.s:SetAttrs( { 'fg': s:gray5, 'bg': s:gray0, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
-exe 'hi! Keyword          '.s:SetAttrs( { 'fg': s:gray4, 'bg': s:gray0, 'sp': s:N, 'g_attrs': [ s:u ], 'c_attrs': [ s:u ], 'term': s:N } )
+exe 'hi! Operator         '.s:SetAttrs( { 'fg': s:gray5, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
+exe 'hi! Keyword          '.s:SetAttrs( { 'fg': s:blue3, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:u ], 'c_attrs': [ s:u ], 'term': s:N } )
 exe 'hi! Exception        '.s:SetAttrs(s:defaults)
 exe 'hi! PreProc          '.s:SetAttrs(s:defaults)
 exe 'hi! Include          '.s:SetAttrs(s:defaults)
