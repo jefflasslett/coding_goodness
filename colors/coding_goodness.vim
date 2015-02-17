@@ -136,8 +136,8 @@ exe 'hi! WildMenu         '.s:SetAttrs(s:defaults)
 
 exe 'hi! Comment          '.s:SetAttrs( { 'fg': s:grn1, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
 
+exe 'hi! String           '.s:SetAttrs( { 'fg': s:orng1, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
 exe 'hi! Constant         '.s:SetAttrs( { 'fg': s:red0, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
-hi! link String           Constant
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
@@ -165,7 +165,7 @@ hi! link StorageClass Type
 hi! link Structure    Type
 hi! link Typedef      Type
 
-exe 'hi! Special          '.s:SetAttrs( { 'fg': s:orng1, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
+exe 'hi! Special          '.s:SetAttrs( { 'fg': s:orng2, 'bg': s:black, 'sp': s:N, 'g_attrs': [ s:N ], 'c_attrs': [ s:N ], 'term': s:N } )
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
